@@ -1,0 +1,14 @@
+html
+  head
+    title Semantics3 UPC Search Engine
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        h1 Semantics3 UPC Search Engine
+
+          p Enter Your UPC:
+            form#formUpc(name="upc",method="post",action="/upc")
+                input#inputUpc(type="text", placeholder="upc", name="upc")
+                button#btnSubmit(type="submit") submit
+

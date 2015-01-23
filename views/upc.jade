@@ -1,0 +1,38 @@
+html
+  head
+    title=title
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        h1 Semantics3 UPC Search Engine
+
+          p Enter Your UPC:
+            form#formUpc(name="upc",method="post",action="/upc")
+                input#inputUpc(type="text", placeholder="upc", name="upc")
+                button#btnSubmit(type="submit") submit
+
+          h2=search
+          if error
+            h3=error
+          else
+            table
+             tr
+               td Image
+               td
+                 img(src=upc.image)
+             tr
+               td Name
+               td= upc.name
+             tr
+               td EAN
+               td= upc.ean
+             tr
+               td Brand
+               td= upc.brand
+             tr
+               td Model
+               td= upc.model
+             tr
+               td Category
+               td= upc.category
